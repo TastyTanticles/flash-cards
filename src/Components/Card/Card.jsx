@@ -1,12 +1,14 @@
 import "./Card.css";
 
-export default function Card({ question, handleClick, selectedId }) {
+export default function Card({ question, handleClick, selectedId, isClicked }) {
   return (
     <div
       onClick={() => handleClick(question.id)}
-      className={question.id === selectedId ? "answer" : "question"}
+      className={
+        isClicked && question.id === selectedId ? "answer" : "question"
+      }
     >
-      {question.id === selectedId ? (
+      {isClicked && question.id === selectedId ? (
         <p>{question.answer}</p>
       ) : (
         <p>{question.question}</p>
