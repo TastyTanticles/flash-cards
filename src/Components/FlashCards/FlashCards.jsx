@@ -34,11 +34,6 @@ const questions = [
       "What do we call an input element that is completely syhnchronised with state?",
     answer: "Controlled element",
   },
-  {
-    id: 143,
-    question: "আমি কাকে সব থেকে বেশি ভালবাসি?",
-    answer: "আমার বউ হিয়াকে",
-  },
 ];
 
 export default function FlashCards() {
