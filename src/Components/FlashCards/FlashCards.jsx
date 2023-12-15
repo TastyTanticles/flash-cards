@@ -37,14 +37,15 @@ const questions = [
 ];
 
 export default function FlashCards() {
-  const [isClicked, setIsClicked] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
 
-  const handleClick = (id) => {
-    setSelectedId(id);
-    setIsClicked(true);
-    console.log(isClicked);
-  };
+  // const handleClick = (id) => {
+  //   setSelectedId(id);
+  //   setIsClicked(!isClicked);
+  //   console.log(isClicked);
+  // };
+
   return (
     <>
       <div className="cards">
@@ -52,9 +53,11 @@ export default function FlashCards() {
           <Card
             key={question.id}
             question={question}
-            handleClick={handleClick}
+            // handleClick={handleClick}
             selectedId={selectedId}
-            isClicked={isClicked}
+            // isClicked={isClicked}
+            setSelectedId={setSelectedId}
+     
           />
         ))}
       </div>
